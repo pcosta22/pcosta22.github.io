@@ -101,6 +101,12 @@ themeBtn.onclick = () => {
   themeBtn.textContent = app.classList.contains("dark") ? "☀️" : "🌙";
 };
 
+//novo
+const btnGlitter = document.getElementById("btn-glitter");
+btnGlitter.addEventListener("click", () => {
+  document.body.classList.toggle("glitter-mode");
+});
+
 document.querySelectorAll(".close").forEach(btn => {
   btn.onclick = closeOverlays;
 });
