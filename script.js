@@ -25,39 +25,50 @@ function getRandomItems(array, count) {
   return [...array].sort(() => 0.5 - Math.random()).slice(0, count);
 }
 
+function createCheckboxElement(item) {
+  const container = document.createElement("div");
+  container.className = "checkbox-container";
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = bingoState[item] || false;
+
+  checkbox.onchange = () => handleCheckboxChange(item, checkbox);
+
+  const label = document.createElement("label");
+  label.textContent = item;
+
+  container.appendChild(checkbox);
+  container.appendChild(label);
+
+  return container;
+}
+
+function handleCheckboxChange(item, checkbox) {
+  bingoState[item] = checkbox.checked;
+  localStorage.setItem("bingo-state", JSON.stringify(bingoState));
+
+  if (checkbox.checked) {
+    showOverlay(overlayDrink, 1500);
+  }
+
+  const checkedCount = bingoItems.filter(i => bingoState[i]).length;
+
+  if (checkedCount === bingoItems.length) {
+    showOverlay(overlayBingo);
+  } else if (checkedCount === bingoItems.length - 1) {
+    showOverlay(overlayAlmost);
+  }
+}
+
 function renderBingo() {
   bingoList.innerHTML = "";
   bingoItems.forEach(item => {
-    const container = document.createElement("div");
-    container.className = "checkbox-container";
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = bingoState[item] || false;
-    checkbox.onchange = () => {
-      bingoState[item] = checkbox.checked;
-      localStorage.setItem("bingo-state", JSON.stringify(bingoState));
-
-      if (checkbox.checked) {
-        showOverlay(overlayDrink, 1500);
-      }
-
-      const checkedCount = bingoItems.filter(i => bingoState[i]).length;
-      if (checkedCount === bingoItems.length) {
-        showOverlay(overlayBingo);
-      } else if (checkedCount === bingoItems.length - 1) {
-        showOverlay(overlayAlmost);
-      }
-    };
-
-    const label = document.createElement("label");
-    label.textContent = item;
-
-    container.appendChild(checkbox);
-    container.appendChild(label);
-    bingoList.appendChild(container);
+    const checkboxEl = createCheckboxElement(item);
+    bingoList.appendChild(checkboxEl);
   });
 }
+
 
 function showOverlay(overlay, duration = null) {
   overlay.classList.remove("hidden");
