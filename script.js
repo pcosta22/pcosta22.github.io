@@ -92,7 +92,7 @@ function initGame() {
 }
 
 function startNewGame() {
-  bingoItems = getRandomItems(allItems, 10);
+  bingoItems = getRandomItems(allItems, 14);
   bingoState = {};
   bingoItems.forEach(item => bingoState[item] = false);
   localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
