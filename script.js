@@ -1,13 +1,13 @@
 const allItems = [
-  "Pirotecnia", "Mudança de nota", "Máquina de vento", "BDSM KINKY OOOOH", "Máquina de fumo", "Adereço gigante questionável", "free feet pics (artista descalç)",
+  /*"Pirotecnia", "Mudança de nota", "Máquina de vento", "BDSM KINKY OOOOH", "Máquina de fumo", "Adereço gigante questionável", "free feet pics (artista descalç)",
   "glitter glitter glitter", "Letra política", "Dueto", "Instrumento estranho", "Voice crack", "Nota extra longa", "Canção bilíngue",
   "Balada dramática desnecessária", "Língua nativa", "Fato de animal", "Asas", "Coreografia intensa", "Artista a chorar", "PIANO", "Fenómeno meteorológico",
   "Câmara aérea", "Luzes epilépticas", "Roupa prateada/dourada", "Apresentador(es) awkward", "Ovação em pé", "Filtro na câmara (PB, sépia...)", "Hino à paz",
   "Referência à guerra", "Free Palestine 🇵🇸", "Solo guitarra", "Mudança de estilo inesperada", "#free the nipple", "Banda ao vivo", "Verka Serduchka",
-  "UK ou DE em último", "isto é meio gay...", "Erro técnico", "Portugal nos últimos 5", "FUCK ISRAEL", "START VOTING NOW", "Falha de som", "Douze points",
+  "UK ou DE em último", "isto é meio gay...", "Erro técnico", "Portugal nos últimos 5", */"FUCK ISRAEL", /*"START VOTING NOW", "Falha de som", "Douze points",
   "CHA CHA CHA", "Saxofone/Violino", "Artista canta deitad", "Artista levantad por dançarinos", "Dança tradicional", "Anos 70/80", "Artista muda de roupa",
   "Artista suspenso/voa", "Performance minimalista", "Vestido volumoso", "LOVE LOVE PEACE PEACE", "Flashback", "Thank you, Merci, Gracias, Obrigado",
-  "Chapéu", "Yodel", "BEIJO!", "Apresentador muda de roupa", "Momento je ne parle pas", "Good morning Australia",
+  "Chapéu", "Yodel", "BEIJO!", "Apresentador muda de roupa", "Momento je ne parle pas", "Good morning Australia",*/
 ];
 
 const app = document.getElementById('app');
