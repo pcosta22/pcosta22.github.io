@@ -1,1 +1,43 @@
-Hello World
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bingo Eurovisão 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app" class="light">
+    <div class="header">
+      <h1>🎯 Bingo Eurovisão 2025</h1>
+      <button id="toggle-theme">🌙</button>
+    </div>
+
+    <div class="controls">
+      <button id="reset">↩️ Limpar</button>
+    </div>
+
+    <div class="card">
+      <div id="bingo-list" class="grid"></div>
+    </div>
+
+    <div id="overlay-drink" class="overlay hidden">🍻 BEBE!</div>
+    <div id="overlay-bingo" class="overlay hidden">
+      <p>🎉 BINGO 🎉</p>
+      <p>ESTE É DE PENALTI!</p>
+      <button class="close">X</button>
+    </div>
+    <div id="overlay-almost" class="overlay hidden">
+      <p>🍻 Mais um golinho...</p>
+      <p>É altura de encher o copo e preparar o grande final!</p>
+      <button class="close">X</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
