@@ -91,6 +91,16 @@ function initGame() {
   renderBingo();
 }
 
+function startNewGame() {
+  bingoItems = getRandomItems(allItems, 10);
+  bingoState = {};
+  bingoItems.forEach(item => bingoState[item] = false);
+  localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
+  localStorage.setItem("bingo-state", JSON.stringify(bingoState));
+  renderBingo();
+  closeOverlays();
+}
+
 resetBtn.onclick = () => {
   bingoItems.forEach(item => bingoState[item] = false);
   localStorage.setItem("bingo-state", JSON.stringify(bingoState));
@@ -107,5 +117,8 @@ themeBtn.onclick = () => {
 document.querySelectorAll(".close").forEach(btn => {
   btn.onclick = closeOverlays;
 });
+
+document.getElementById("new-game").onclick = startNewGame;
+
 
 initGame();
