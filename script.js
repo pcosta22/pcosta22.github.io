@@ -1,13 +1,5 @@
 const allItems = [
-  "Pirotecnia", "Mudança de nota", "Máquina de vento", "BDSM KINKY OOOOH", "Máquina de fumo", "Adereço gigante questionável", "free feet pics (artista descalç)",
-  "glitter glitter glitter", "Letra política", "Dueto", "Instrumento estranho", "Voice crack", "Nota extra longa", "Canção bilíngue",
-  "Balada dramática desnecessária", "Língua nativa", "Fato de animal", "Asas", "Coreografia intensa", "Artista a chorar", "PIANO", "Fenómeno meteorológico",
-  "Câmara aérea", "Luzes epilépticas", "Roupa prateada/dourada", "Apresentador(es) awkward", "Ovação em pé", "Filtro na câmara (PB, sépia...)", "Hino à paz",
-  "Referência à guerra", "Free Palestine 🇵🇸", "Solo guitarra", "Mudança de estilo inesperada", "#free the nipple", "Banda ao vivo", "Verka Serduchka",
-  "UK ou DE em último", "isto é meio gay...", "Erro técnico", "Portugal nos últimos 5", "FUCK ISRAEL", "START VOTING NOW", "Falha de som", "Douze points",
-  "CHA CHA CHA", "Saxofone/Violino", "Artista canta deitad", "Artista levantad por dançarinos", "Dança tradicional", "Anos 70/80", "Artista muda de roupa",
-  "Artista suspenso/voa", "Performance minimalista", "Vestido volumoso", "LOVE LOVE PEACE PEACE", "Flashback", "Thank you, Merci, Gracias, Obrigado",
-  "Chapéu", "Yodel", "BEIJO!", "Apresentador muda de roupa", "Momento je ne parle pas", "Good morning Australia",
+  "Pirotecnia", "Mudança de nota", "Máquina de vento", "BDSM KINKY", "Máquina de fumo", "Adereço gigante desnecessário", "glitter glitter glitter", "Dueto", "Voice crack", "Nota extra longa", "Canção bilíngue", "Artista dança deitado", "Balada aborrecida", "Língua nativa", "Fato de animal", "Coreografia dramática", "Artista a chorar", "PIANO", "Fenómeno meteorológico", "Câmara aérea", "Luzes epilépticas", "Roupa monocromática", "Apresentador(es) awkward", "Ovação em pé", "Filtro na câmara (PB, sépia...)", "Referência à guerra", "🇵🇸", "Booooooooooooooooo", "Referência ao genocídio (sabemos que não vai acontecer, por isso bebe para afogar as mágoas vá)", "Solo guitarra", "Não sei o que está a acontecer mas CONCORDO", "isto passou e o Milkshake Man não? ", "Mudança de estilo inesperada", "#free the nipple", "Banda ao vivo", "Verka Serduchka", "UK ou DE em último", "isto é meio gay...", "Erro técnico", "Portugal nos últimos 5", "Ópera?", "FUCK ISRAEL", "START VOTING NOW", "Falha de som/micro", "Douze points", "CHA CHA CHA", "Saxofone/Violino", "Artista canta deitado", "Artista levado/levantado por dançarinos", "Dança tradicional étnica", "Artista muda de roupa", "Artista suspenso/voa", "Performance minimalista", "Vestido volumoso", "LOVE LOVE PEACE PEACE", "Flashback", "Artista agradece em várias línguas", "Yodel", "BEIJO!", "Apresentador muda de roupa", "Momento je ne parle pas", "Discrepância gigante no voto do Júri/Público", "Category is: DRAG", "esta vai pra minha playlist mesmo", "🏳️‍🌈"
 ];
 
 const app = document.getElementById('app');
