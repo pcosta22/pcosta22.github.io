@@ -83,7 +83,7 @@ function initGame() {
     bingoItems = JSON.parse(storedItems);
     bingoState = JSON.parse(storedState);
   } else {
-    bingoItems = getRandomItems(allItems, 3);
+    bingoItems = getRandomItems(allItems, 14);
     bingoState = {};
     bingoItems.forEach(item => bingoState[item] = false);
     localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
@@ -94,7 +94,7 @@ function initGame() {
 }
 
 function startNewGame() {
-  bingoItems = getRandomItems(allItems, 3);
+  bingoItems = getRandomItems(allItems, 14);
   bingoState = {};
   bingoItems.forEach(item => bingoState[item] = false);
   localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
