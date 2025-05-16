@@ -9,6 +9,8 @@ const themeBtn = document.getElementById('toggle-theme');
 const overlayDrink = document.getElementById('overlay-drink');
 const overlayBingo = document.getElementById('overlay-bingo');
 const overlayAlmost = document.getElementById('overlay-almost');
+const overlayVerka = document.getElementById('overlay-verka');
+
 
 let bingoItems = [];
 let bingoState = {};
@@ -81,7 +83,7 @@ function initGame() {
     bingoItems = JSON.parse(storedItems);
     bingoState = JSON.parse(storedState);
   } else {
-    bingoItems = getRandomItems(allItems, 14);
+    bingoItems = getRandomItems(allItems, 3);
     bingoState = {};
     bingoItems.forEach(item => bingoState[item] = false);
     localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
@@ -92,7 +94,7 @@ function initGame() {
 }
 
 function startNewGame() {
-  bingoItems = getRandomItems(allItems, 14);
+  bingoItems = getRandomItems(allItems, 3);
   bingoState = {};
   bingoItems.forEach(item => bingoState[item] = false);
   localStorage.setItem("bingo-items", JSON.stringify(bingoItems));
@@ -119,6 +121,15 @@ document.querySelectorAll(".close").forEach(btn => {
 });
 
 document.getElementById("new-game").onclick = startNewGame;
+
+const pageTitle = document.getElementById("page-title");
+const gifOverlay = document.getElementById("gif-overlay");
+pageTitle.onclick = () => {
+  gifOverlay.classList.remove("hidden");
+  setTimeout(() => gifOverlay.classList.add("hidden"), 3000);
+};
+
+
 
 
 initGame();

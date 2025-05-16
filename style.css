@@ -4,6 +4,33 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+#page-title {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#gif-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#gif-overlay.hidden {
+  display: none;
+}
+
+#gif-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 #app.light {
   background-color: white;
   color: black;
