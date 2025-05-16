@@ -40,6 +40,23 @@ function renderBingo() {
 
       if (checkbox.checked) {
         showOverlay(overlayDrink, 1500);
+
+        if (item === "FUCK ISRAEL") {
+          const audio = document.getElementById("netta-audio");
+          const egg = document.getElementById("netta-easteregg");
+
+          if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.warn("Erro ao tocar som:", e));
+          }
+
+          if (egg) {
+            egg.style.display = "block";
+            setTimeout(() => {
+              egg.style.display = "none";
+            }, 3000);
+          }
+        }
       }
 
       const checkedCount = bingoItems.filter(i => bingoState[i]).length;
@@ -58,6 +75,7 @@ function renderBingo() {
     bingoList.appendChild(container);
   });
 }
+
 
 function showOverlay(overlay, duration = null) {
   overlay.classList.remove("hidden");
