@@ -42,13 +42,7 @@ function renderBingo() {
         showOverlay(overlayDrink, 1500);
 
         if (item === "FUCK ISRAEL") {
-          const audio = document.getElementById("netta-audio");
           const egg = document.getElementById("netta-easteregg");
-
-          if (audio) {
-            audio.currentTime = 0;
-            audio.play().catch(e => console.warn("Erro ao tocar som:", e));
-          }
 
           if (egg) {
             egg.style.display = "block";
